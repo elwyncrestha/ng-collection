@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-collection"
+    }
+  },
+  "defaultProject": "ng-collection",
+  "cli": {
+    "analytics": false
+  }
 }
