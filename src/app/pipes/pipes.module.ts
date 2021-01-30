@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TrimLeadingZerosPipe } from './collections/index';
+import { TrimLeadingZerosPipe, OrderByPipe } from './collections/index';
 
 const PIPES = [
-  TrimLeadingZerosPipe
+  TrimLeadingZerosPipe,
+  OrderByPipe
 ];
 
 @NgModule({

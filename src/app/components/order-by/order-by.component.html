@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <tr class="pointer">
+      <th *ngFor="let prop of PersonProps" (click)="sortChange(prop)">
+        <div class="d-inline-flex justify-content-start w-50">{{ prop | titlecase }}</div>
+        <div class="d-inline-flex justify-content-end w-50">
+          <ng-container *ngIf="sort.col === prop">
+            <ng-container *ngTemplateOutlet="sortIcon; context: { $implicit: sort.isDesc }"></ng-container>
+          </ng-container>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of persons | orderBy: sort.col: sort.isDesc">
+      <td>{{ person.id }}</td>
+      <td>{{ person.name }}</td>
+      <td>{{ person.date }}</td>
+  </tbody>
+</table>
+
+<ng-template #sortIcon let-isDesc>
+  <img *ngIf="isDesc" class="icon" src="assets/svg/down-chevron-svgrepo-com.svg" alt="Sort Down Icon">
+  <img *ngIf="!isDesc" class="icon" src="assets/svg/up-chevron-svgrepo-com.svg" alt="Sort Up Icon">
+</ng-template>
