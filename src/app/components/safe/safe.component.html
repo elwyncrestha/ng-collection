@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Without</th>
+      <th>With</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div [innerHTML]="testHtml"></div>
+      </td>
+      <td>
+        <div [innerHTML]="testHtml | safe: SafePipeType.HTML"></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
