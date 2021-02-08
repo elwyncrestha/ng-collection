@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-  @Input() pipeName: string;
+  @Input() name: string;
 
   constructor() { }
 

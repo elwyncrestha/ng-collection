@@ -8,6 +8,7 @@ import { TrimleadingzerosComponent } from './components/trimleadingzeros/trimlea
 import { OrderByComponent } from './components/order-by/order-by.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { SafeComponent } from './components/safe/safe.component';
+import { UrlImageToBase64Component } from './components/url-image-to-base64/url-image-to-base64.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SafeComponent } from './components/safe/safe.component';
     TrimleadingzerosComponent,
     OrderByComponent,
     DetailComponent,
-    SafeComponent
+    SafeComponent,
+    UrlImageToBase64Component
   ],
   imports: [
     BrowserModule,
