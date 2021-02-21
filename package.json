@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-ci": "ng build --prod --output-path public --base-href=/ng-collection/",
     "deploy": "ng deploy --base-href=/ng-collection/",
     "test": "ng test --browsers ChromeHeadless",
     "lint": "ng lint",
