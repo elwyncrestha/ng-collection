@@ -9,6 +9,7 @@ import { OrderByComponent } from './components/order-by/order-by.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { SafeComponent } from './components/safe/safe.component';
 import { UrlImageToBase64Component } from './components/url-image-to-base64/url-image-to-base64.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UrlImageToBase64Component } from './components/url-image-to-base64/url-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PipesModule
+    PipesModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
