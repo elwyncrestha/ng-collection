@@ -32,7 +32,8 @@ jobs:
         run: npm install
         
       - name: Build and deploy to GitHub Pages
-        env:
-          AT: ${{ secrets.GH_TOKEN }}
-        run: npm run deploy -- --repo "https://git:${AT}@github.com/${GITHUB_REPOSITORY}.git" --name="Elvin Shrestha" --email="elwyncrestha@gmail.com"
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
 
