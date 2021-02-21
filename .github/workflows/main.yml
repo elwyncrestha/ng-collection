@@ -22,8 +22,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Use Node.js 12.18
         uses: actions/setup-node@v2.1.4
@@ -33,6 +31,8 @@ jobs:
       - name: Install dependencies
         run: npm install
         
-      - name: Build and deploy to GitHub Pages        
-        run: npm run deploy
+      - name: Build and deploy to GitHub Pages
+        env:
+          AT: ${{ secrets.GH_TOKEN }}
+        run: npm run deploy -- --repo "https://git:${AT}@github.com/${GITHUB_REPOSITORY}.git" --name="Elvin Shrestha" --email="elwyncrestha@gmail.com"
 
