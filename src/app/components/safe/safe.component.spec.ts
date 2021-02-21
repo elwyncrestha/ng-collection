@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SafeComponent } from './safe.component';
 
@@ -6,7 +6,7 @@ describe('SafeComponent', () => {
   let component: SafeComponent;
   let fixture: ComponentFixture<SafeComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SafeComponent ]
     })
