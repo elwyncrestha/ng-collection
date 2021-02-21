@@ -5,7 +5,6 @@ import { DynamicModule } from 'ng-dynamic-component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DemoComponentModule } from './components/demo-component.module';
-import { PipesModule } from './pipes/pipes.module';
 import { ThemeModule } from './theme/theme.module';
 
 @NgModule({

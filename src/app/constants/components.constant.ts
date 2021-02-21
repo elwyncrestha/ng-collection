@@ -1,4 +1,5 @@
 import { Type } from '@angular/core';
+import { Base64ImgToFileComponent } from '../components/base64-img-to-file/base64-img-to-file.component';
 import { OrderByComponent } from '../components/order-by/order-by.component';
 import { SafeComponent } from '../components/safe/safe.component';
 import { TrimleadingzerosComponent } from '../components/trimleadingzeros/trimleadingzeros.component';
@@ -45,6 +46,11 @@ export const COMPONENT_COLLECTIONS: ComponentCollection[] = [
         description: 'Converts image resource to base64 hash.',
         component: UrlImageToBase64Component,
       },
+      {
+        name: 'Base64 image to an image file',
+        description: 'Converts base64 image to an image file.',
+        component: Base64ImgToFileComponent
+      }
     ],
   },
 ];

@@ -1,0 +1,3 @@
+<img #image [src]="base64Image | async" alt="Girl" />
+<br />
+<button (click)="convert(image.src)" mat-raised-button color="primary">Convert</button>

@@ -15,7 +15,7 @@ export class UrlImageToBase64Component implements OnInit {
   public base64Image: Observable<string>;
   public SafePipeType = SafePipeType;
 
-  constructor(private imageService: ImageService) {}
+  constructor(protected readonly imageService: ImageService) {}
 
   ngOnInit(): void {
     this.base64Image = this.imageService
