@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable, Observer } from 'rxjs';
 
+/**
+ * This service was created with references taken
+ * from: https://medium.com/better-programming/convert-a-base64-url-to-image-file-in-angular-4-5796a19fdc21
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -69,7 +73,7 @@ export class ImageService {
       const imageBlob: Blob = blob;
       const imageName = 'test.img';
       const imageFile: File = new File([imageBlob], imageName, {
-        type: 'image/jpeg'
+        type: 'image/jpeg',
       });
       const generatedImage = window.URL.createObjectURL(imageFile);
       window.open(generatedImage);
