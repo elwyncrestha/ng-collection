@@ -5,8 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TrimLeadingZerosPipe implements PipeTransform {
 
-  transform(value: any, ...args: unknown[]): any {
-    return value * 1;
+  transform(value: any, splitter = ' '): any {
+    const splitted = value.split(splitter);
+    return (splitted as []).map((s) => isNaN(s * 1) ? s : (s * 1)).join(splitter);
   }
 
 }
